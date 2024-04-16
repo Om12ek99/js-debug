@@ -27,11 +27,25 @@ for (let i = 0; i < 5; i++) {
 }
 
 
-
+// **********************************************************************************************************************************************************
 
 
 // ESERCIZIO 2
 function addIfEven(num) {
+    if (num % 2 = 0) {
+        return num + 5;
+    }
+    return num;
+}
+
+// CORREZIONE
+// 1.L'esercizio rappresenta una function che dovrebbe riconoscerese un numero inserito dall'utenterappresentato dal parametro num è pari o dispari.
+// nel caso sia pari la function deve sommare il numero 5.
+// 2. L'errore è un errore di sintassi, in quanto di default il parametro num è una stringa, percio il + non eseguira la somma ma una concatenzaione.
+
+// esercizio corretto
+function addIfEven(num) {
+    num = parseInt(num);
     if (num % 2 = 0) {
         return num + 5;
     }
