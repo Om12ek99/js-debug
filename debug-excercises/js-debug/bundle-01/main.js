@@ -64,7 +64,16 @@ function loopToFive() {
 }
 
 // Correzione
-1. 
+// 1. La function rappresenta un ciclo for che esegue un loop fino all'indice 5
+// 2. Non ho riconosciuto errori di sintassi apparte il Nome, infatti una function deve essere un codice generico.
+// 3.Non ho riconosciuto errori di logica
+
+// correzione
+function indexSlider() {
+    for (let i = 0, i < 5, i++) {
+        console.log(i);
+    }
+}
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 function displayEvenNumbers() {
