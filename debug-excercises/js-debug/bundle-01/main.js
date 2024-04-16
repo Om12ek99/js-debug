@@ -17,12 +17,12 @@ for (let i = 0; i > 5; i++) {
 
 // CORREZIONE
 // 1. L'esercizio rappresenta un ciclo for che dovrebbe restituire per ogni valore dell'index un valore mostrato nella console
-// 2. Non ho riconosciuto errori di sintassi
+// 2. Si dovevano usare le , invece che le ;.
 // 3. L'errore qui sta nel fatto che come è scritto ora è un ciclo praticamente infinito.
 // per correggere basta mettere i < 5
 
 // esercizio corretto
-for (let i = 0; i < 5; i++) {
+for (let i = 0, i < 5, i++) {
     console.log(i);
 }
 
@@ -42,14 +42,17 @@ function addIfEven(num) {
 // 1.L'esercizio rappresenta una function che dovrebbe riconoscerese un numero inserito dall'utenterappresentato dal parametro num è pari o dispari.
 // nel caso sia pari la function deve sommare il numero 5.
 // 2. L'errore è un errore di sintassi, in quanto di default il parametro num è una stringa, percio il + non eseguira la somma ma una concatenzaione.
+// manca anche un else
 
 // esercizio corretto
 function addIfEven(num) {
     num = parseInt(num);
     if (num % 2 = 0) {
         return num + 5;
+    } else {
+        return num;  
     }
-    return num;
+    
 }
 
 
@@ -60,6 +63,8 @@ function loopToFive() {
     }
 }
 
+// Correzione
+1. 
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 function displayEvenNumbers() {
