@@ -23,12 +23,37 @@ function checkAge() {
 }
 checkAge();
 
+
+// 1. La funzione deve controllare se l'eta inserita è maggiore o minore di 18 anni
+// il myAge non ha senso che sia allinterno della function, poi sopprattutto dichiarato come costante, siccome è un valore che cambia.
+// anche message non ha senso che sia all'interno della function. potremmo metterlo fuori e restituire un parametro
+
+// esercizio corretto
+    let myAge = 32;
+    let message = '';
+function checkAge(age, result) {
+   
+
+    if (age < 18) {
+        result = `Sei troppo giovane! Hai ${age} anni!`;
+    } else {
+        result = 'Hai più di 18 anni!';
+    }
+}
+checkAge(myAge, message);
+
+
 // ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
 }
 printColorsNumber();
+
+
+// 1. questa function dovrebbe restituire a console il numero di colori presenti nell'array colors
+// Il primo errore è un errore di sintassi, in quanto length è scritto sbagliato
+
 
 
 // ESERCIZIO 3
