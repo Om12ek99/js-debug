@@ -132,9 +132,35 @@ function checkAccessImproved() {
     }
     checkAccessImproved();
 
+    // c'è un problema nella logica di controllo dell'accesso all'interno del ciclo for. Attualmente, stai verificando l'accesso ad ogni iterazione del ciclo for, 
+    // il che potrebbe causare la stampa ripetuta dei messaggi di accesso consentito o negato, a seconda dell'ultimo valore di grantAccess impostato nell'iterazione del ciclo.
+    // Per risolvere questo problema, dovresti spostare la logica di stampa dei messaggi all'esterno del ciclo for, in modo che venga eseguita solo dopo che l'intero ciclo è stato completato e la verifica dell'accesso è stata effettuata su tutti gli indirizzi email nell'array.
 
+// esercizio corretto
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
 
+    let grantAccess = false;
 
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
+
+        if (userEmail.length > 5) {
+            if (email === userEmail) {
+                grantAccess = true;
+            }
+        }
+    }
+
+    if (grantAccess) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+
+checkAccessImproved();
 
 
 
