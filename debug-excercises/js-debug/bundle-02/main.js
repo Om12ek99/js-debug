@@ -65,6 +65,19 @@ function addNumbers() {
 }
 addNumbers();
 
+// In questo esercizio la funzione deve restituire l somma tra il numero che lutente fornisce ed il numero 12
+// il primo errore sta nel prompt, infatti questo restituira sempre una stringa che poi si concatenera con il numero 12.
+// per ovviare a sto problema possiamo convertire la stringa in un numero con parseINT oppure parseFloat per i decimali
+
+// esercizio corretto
+function addNumbers() {
+    const userNumber = parseFloat(prompt('Inserisci un numero'));
+    const total = userNumber + 12;
+
+    console.log(`Il risultato finale è ${total}`);
+}
+addNumbers();
+
 
 // ESERCIZIO 4
 function checkAccess() {
