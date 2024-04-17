@@ -98,6 +98,11 @@ function checkAccess() {
 }
 checkAccess();
 
+// questa funzione controlla l'email fornita se presente nell'array di email adresses. se presente restituisce accesso consentito
+// La variabile grantAccess è inizializzata come una stringa ('false') anziché come un booleano (false). Questo comporta un confronto incoerente in seguito con l'operatore di uguaglianza stretta ===.
+// Nella seconda condizione if, stai verificando se grantAccess è uguale a true, ma grantAccess è una stringa, quindi questa condizione non sarà mai vera.
+
+
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
 function checkAccessImproved() {
