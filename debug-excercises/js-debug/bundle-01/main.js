@@ -41,13 +41,11 @@ function addIfEven(num) {
 // CORREZIONE
 // 1.L'esercizio rappresenta una function che dovrebbe riconoscerese un numero inserito dall'utenterappresentato dal parametro num è pari o dispari.
 // nel caso sia pari la function deve sommare il numero 5.
-// 2. L'errore è un errore di sintassi, in quanto di default il parametro num è una stringa, percio il + non eseguira la somma ma una concatenzaione.
-// manca anche un else
+// manca un else e l'ugualglianza è sbagliata.
 
 // esercizio corretto
 function addIfEven(num) {
-    num = parseInt(num);
-    if (num % 2 = 0) {
+    if (num % 2 === 0) {
         return num + 5;
     } else {
         return num;  
@@ -66,11 +64,11 @@ function loopToFive() {
 // Correzione
 // 1. La function rappresenta un ciclo for che esegue un loop fino all'indice 5
 // 2. Non ho riconosciuto errori di sintassi apparte il Nome, infatti una function deve essere un codice generico.
-// 3.Non ho riconosciuto errori di logica
+// 3.Non ho riconosciuto errori di logica apparte il fatto che se vogliamo che arrivi a 5 dovevamo mettere il <=
 
 // correzione
 function indexSlider() {
-    for (let i = 0, i < 5, i++) {
+    for (let i = 0, i <= 5, i++) {
         console.log(i);
     }
 }
@@ -87,3 +85,14 @@ function displayEvenNumbers() {
     }
 }
 displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+
+// correzione 
+// 1. La function deve poter riconoscere i numeri pari per poi inserirli in un array.
+    // il primo errore magari potrebbe essere la scrittura del nome della function
+    // infatti questa funione non esegue il displat di nulla, ma seleziona i numeri pari.
+    // il primo errore che noto sta nella sintassi allinterno ella condizione del ciclo for. Infatti si sono usate i ; piuttosto che le ,
+    // abbiamo un errore anche nella condizione dell'if, dove bisognava usare l'operatore identità
+    // l'array numbers deve essere dichiarato al di fuori della function
+    // l'array numbers deve essere dichiarato chon un const
+    // il ciclo for deve scorrere tutti i SVGAnimatedNumberList, il -1 non è necessario
+    // il return non è necessario.
